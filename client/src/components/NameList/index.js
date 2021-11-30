@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
-import Fetch from "../../Fetch";
+import React from "react";
 import { namesArray } from "../../helpers/names";
-
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -20,16 +18,28 @@ export default function SelectedListItem() {
   };
 
   return (
-    <Box sx={{ width: "100%", maxWidth: 360, bgcolor: "background.blue" }}>
-      <List component="nav" aria-label="secondary mailbox folder">
+    <Box
+      sx={{
+        width: "35%",
+        maxWidth: 360,
+        backgroundColor: "white",
+        maxHeight: "500px",
+        overflow: "auto",
+      }}
+    >
+      <List component="nav">
         {!namesArray
           ? null
           : namesArray.map((item, index) => {
-          
               return (
                 <ListItemButton
+                  sx={{
+                    width: "100%",
+                    maxWidth: 360,
+                    backgroundColor: "white",
+                  }}
                   key={index}
-                  selected={selectedIndex === index+1}
+                  selected={selectedIndex === index + 1}
                   onClick={() => handleListItemClick(namesArray[index][0])}
                 >
                   <ListItemText primary={item[1]} />
