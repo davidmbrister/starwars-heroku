@@ -28,7 +28,7 @@ const CharacterCard = ({ characterId }) => {
     <div>
       {!characterId ? null : (
         <Fetch
-        uri={`http://localhost:${process.env.PORT ? process.env.PORT : 9000}/starWarsAPI/${characterId}`}
+          uri={`http://localhost:9000/starWarsAPI/${characterId}`}
           renderSuccess={CharacterTemplate}
         />
       )}
@@ -74,8 +74,8 @@ function CharacterTemplate(characterData) {
           {characterDetails.age}
         </Typography>
       </CardContent>
-      <Typography sx={{ mb: 0.5, ml: 0.5, mr: 0.5}} color="text.secondary">
-        Hover over the stuff below to get more info...
+      <Typography sx={{ mb: 0.5, ml: 0.5, mr: 0.5 }} color="text.secondary">
+        Hover over the words below to get more info...
       </Typography>
       <Divider />
       <CardActions>
@@ -158,10 +158,8 @@ function CharacterTemplate(characterData) {
   );
 
   return (
-    <Box sx={{ minWidth: 275, padding: 23}}>
-      <Card variant="outlined">
-        {card}
-      </Card>
+    <Box sx={{ minWidth: 275, padding: 23 }}>
+      <Card variant="outlined">{card}</Card>
     </Box>
   );
 }
