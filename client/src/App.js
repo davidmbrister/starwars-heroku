@@ -6,7 +6,7 @@ import SearchBar from "./components/SearchBar";
 import  {useCardId}  from './hooks/useCard';
 
 
-const LayoutStyling = {width:"740px",background:"aliceblue", border:"none", padding:"0.5rem"};
+const LayoutStyling = {width:"740px",background:"aliceblue", border:"none", padding:"0.5rem", marginLeft: "auto"};
 
 function App() {
  const {getCardData} = useCardId()
