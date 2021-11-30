@@ -28,7 +28,7 @@ const CharacterCard = ({ characterId }) => {
     <div>
       {!characterId ? null : (
         <Fetch
-          uri={`/starWarsAPI/${characterId}`}
+          uri={`/api/starWarsAPI/${characterId}`}
           renderSuccess={CharacterTemplate}
         />
       )}
