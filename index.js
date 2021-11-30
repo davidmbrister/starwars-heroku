@@ -12,8 +12,19 @@ app.use(cors());
 app.use("/starWarsAPI", starWarsAPIRouter);
 
 
+const path = require('path')
+
+const publicPath = path.join(__dirname, '', 'public');
+app.use(express.static(publicPath));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
+
 var port = normalizePort(process.env.PORT || '9000');
 app.set('port', port);
+
+
 
 /**
  * Create HTTP server.
