@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ed80c621.chunk.css",
+    "main.js": "/static/js/main.f01a6459.chunk.js",
+    "main.js.map": "/static/js/main.f01a6459.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.77d2af12.js",
+    "runtime-main.js.map": "/static/js/runtime-main.77d2af12.js.map",
+    "static/js/2.e23bca8e.chunk.js": "/static/js/2.e23bca8e.chunk.js",
+    "static/js/2.e23bca8e.chunk.js.map": "/static/js/2.e23bca8e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.ed80c621.chunk.css.map": "/static/css/main.ed80c621.chunk.css.map",
+    "static/js/2.e23bca8e.chunk.js.LICENSE.txt": "/static/js/2.e23bca8e.chunk.js.LICENSE.txt",
+    "static/media/starwars.9c0fe0b8.jpg": "/static/media/starwars.9c0fe0b8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.77d2af12.js",
+    "static/js/2.e23bca8e.chunk.js",
+    "static/css/main.ed80c621.chunk.css",
+    "static/js/main.f01a6459.chunk.js"
+  ]
+}

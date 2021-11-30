@@ -21,12 +21,22 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
 }); */
 
-app.use(express.static(path.join(__dirname, 'build')));
+/* app.use(express.static(path.join(__dirname, 'build')));
 
 
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+}); */
+
+app.use(express.static(path.join(__dirname, './build')))
+
+app.get('*', function(_, res) {
+  res.sendFile(path.join(__dirname, './build/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
 
 var port = normalizePort(process.env.PORT || '9000');
 app.set('port', port);
