@@ -9,9 +9,9 @@ import { useCardId } from "../../hooks/useCard";
 export default function SelectedListItem() {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
   const { setCardData } = useCardId(1);
-  const handleListItemClick = (index) => {
-    setCardData(index);
-    setSelectedIndex(index);
+  const handleListItemClick = (characterIndex, listIndex) => {
+    setCardData(characterIndex);
+    setSelectedIndex(listIndex);
     // from here, the cardID context will update the
     // characterCard ID which will cause the context children
     // (importantly, the card) to rerender
@@ -40,7 +40,7 @@ export default function SelectedListItem() {
                   }}
                   key={index}
                   selected={selectedIndex === index + 1}
-                  onClick={() => handleListItemClick(namesArray[index][0])}
+                  onClick={() => handleListItemClick(namesArray[index][0], index+1)}
                 >
                   <ListItemText primary={item[1]} />
                 </ListItemButton>
